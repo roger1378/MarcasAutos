@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/bin/Debug
+/obj
+/src/Autos.Api/bin/Debug/net8.0
+/src/Autos.Api/obj
+/src/Autos.Repository/bin/Debug/net8.0
+/src/Autos.Repository/obj
+/src/Autos.Services/bin/Debug/net8.0
+/src/Autos.Services/obj
+/test/Autos.Test/bin
+/test/Autos.Test/obj
+/.containers/autos-db
