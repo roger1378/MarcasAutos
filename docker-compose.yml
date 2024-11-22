@@ -1,0 +1,22 @@
+services:
+  autos.api:
+    image: ${DOCKER_REGISTRY-}autosapi
+    container_name: autos.api
+    build:
+      context: .
+      dockerfile: src\Autos.Api\Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+
+  autos.database:
+    image: postgres:latest
+    container_name: autos.database
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Password1!
+      - POSTGRES_DB=MarcasAutos
+    volumes:
+      - ./.containers/autos-db:/var/lib/postgresql/data
